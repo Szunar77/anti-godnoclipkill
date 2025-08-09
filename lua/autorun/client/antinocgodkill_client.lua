@@ -1,7 +1,7 @@
 net.Receive("PlyTriedGNK", function()
 	local starttime = CurTime()
 	local howlong = 5 -- For how long should the message be on the players screen?
-	local message = "You cannot damage players with noclip or godmode!" -- The message itself
+	local message = "You cannot damage players while on noclip or godmode!" -- The message itself
     
 	surface.CreateFont("BigFont", {font = "DermaDefault", size = 64, weight = 1000, antialias = true})
 

@@ -4,7 +4,7 @@ util.AddNetworkString("PlyTriedGNK")
 
 hook.Add("PlayerShouldTakeDamage", "PSTD", function(ply, ent)
 	if ent:IsValid() then 
-		if ent:HasGodMode() or ent:GetMoveType() == 8 then 
+		if ent:HasGodMode() or ent:GetMoveType() == 8 and ent ~= ply then 
 			print(ent:GetName() .. " [" .. ent:SteamID() .. "] tried attacking " .. ply:GetName() .. " [" .. ply:SteamID() .. "] with godmode/noclip on!" ) 
 			net.Start("PlyTriedGNK")
 			net.Send(ent)
